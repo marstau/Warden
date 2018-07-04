@@ -37,7 +37,7 @@ heroku addons:create heroku-postgresql:hobby-basic -a magellan-warden
 heroku buildpacks:add https://github.com/debitoor/ssh-private-key-buildpack.git -a magellan-warden
 heroku buildpacks:add heroku/go -a magellan-warden
 heroku config:set SSH_KEY=$(cat ~/.ssh/id_rsa | base64)  -a magellan-warden
-
+heroku config:set url="https://github.com/search" -a magellan-warden
 ```
 
 ## Usage
